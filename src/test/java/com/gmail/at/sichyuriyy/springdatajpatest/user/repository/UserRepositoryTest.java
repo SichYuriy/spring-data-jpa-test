@@ -1,6 +1,7 @@
 package com.gmail.at.sichyuriyy.springdatajpatest.user.repository;
 
 import com.gmail.at.sichyuriyy.springdatajpatest.RepositoryTestWithTestData;
+import com.gmail.at.sichyuriyy.springdatajpatest.user.UserRepository;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
