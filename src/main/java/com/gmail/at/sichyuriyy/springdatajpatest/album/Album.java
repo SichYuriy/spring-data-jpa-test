@@ -1,11 +1,9 @@
 package com.gmail.at.sichyuriyy.springdatajpatest.album;
 
+import com.gmail.at.sichyuriyy.springdatajpatest.author.Author;
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Data
 @Entity
@@ -20,4 +18,7 @@ public class Album {
     private Long id;
     private String title;
     private String description;
+
+    @ManyToOne
+    private Author author;
 }

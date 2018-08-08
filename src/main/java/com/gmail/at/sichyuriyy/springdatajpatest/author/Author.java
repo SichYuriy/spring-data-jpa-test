@@ -1,11 +1,10 @@
 package com.gmail.at.sichyuriyy.springdatajpatest.author;
 
+import com.gmail.at.sichyuriyy.springdatajpatest.album.Album;
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Entity
@@ -18,4 +17,7 @@ public class Author {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+
+    @OneToMany(mappedBy = "author")
+    private List<Album> albums;
 }
