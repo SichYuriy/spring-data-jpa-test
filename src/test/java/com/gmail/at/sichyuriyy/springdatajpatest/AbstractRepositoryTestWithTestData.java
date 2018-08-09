@@ -1,11 +1,7 @@
 package com.gmail.at.sichyuriyy.springdatajpatest;
 
-import com.gmail.at.sichyuriyy.springdatajpatest.Application;
-import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
-import org.springframework.boot.env.PropertiesPropertySourceLoader;
-import org.springframework.boot.env.PropertySourceLoader;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.support.PropertiesLoaderUtils;
 import org.springframework.jdbc.datasource.init.ScriptUtils;
@@ -15,18 +11,14 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.transaction.Transactional;
 import java.io.IOException;
-import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.Properties;
-
-import static org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript;
 
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = Application.class)
 @Transactional
 @Rollback
-public abstract class RepositoryTestWithTestData {
+public abstract class AbstractRepositoryTestWithTestData {
 
     private static final String INSERT_SCRIPT = "database/insert_test_data.sql";
     private static final String DELETE_SCRIPT = "database/delete_test_data.sql";

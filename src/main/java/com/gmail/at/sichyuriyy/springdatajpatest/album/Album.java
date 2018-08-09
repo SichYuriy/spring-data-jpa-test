@@ -1,9 +1,11 @@
 package com.gmail.at.sichyuriyy.springdatajpatest.album;
 
 import com.gmail.at.sichyuriyy.springdatajpatest.author.Author;
+import com.gmail.at.sichyuriyy.springdatajpatest.song.Song;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Entity
@@ -21,4 +23,7 @@ public class Album {
 
     @ManyToOne
     private Author author;
+
+    @OneToMany(mappedBy = "album")
+    private List<Song> songs;
 }
