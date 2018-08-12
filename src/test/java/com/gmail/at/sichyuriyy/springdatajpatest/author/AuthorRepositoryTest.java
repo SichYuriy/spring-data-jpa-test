@@ -12,6 +12,7 @@ public class AuthorRepositoryTest extends AbstractRepositoryTestWithTestData {
     private AuthorRepository authorRepository;
 
     /**
+     * <pre>
      *  select
      *         author0_.id as id1_1_0_,
      *         author0_.name as name2_1_0_
@@ -19,6 +20,7 @@ public class AuthorRepositoryTest extends AbstractRepositoryTestWithTestData {
      *         author author0_
      *     where
      *         author0_.id=?
+     *  </pre>
      */
     @Test
     public void findById() {

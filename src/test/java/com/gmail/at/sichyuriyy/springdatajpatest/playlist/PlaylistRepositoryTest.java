@@ -12,6 +12,7 @@ public class PlaylistRepositoryTest extends AbstractRepositoryTestWithTestData {
     private PlaylistRepository playlistRepository;
 
     /**
+     * <pre>
      * select
      *         playlist0_.id as id1_2_0_,
      *         playlist0_.description as descript2_2_0_,
@@ -29,6 +30,7 @@ public class PlaylistRepositoryTest extends AbstractRepositoryTestWithTestData {
      *             on playlist0_.owner_id=user1_.id
      *     where
      *         playlist0_.id=?
+     *  </pre>
      */
     @Test
     public void findById() {

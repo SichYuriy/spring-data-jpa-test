@@ -13,6 +13,7 @@ public class UserRepositoryTest extends AbstractRepositoryTestWithTestData {
     private UserRepository subject;
 
     /**
+     * </pre>
      * select
      *         user0_.id as id1_5_0_,
      *         user0_.birth_date as birth_da2_5_0_,
@@ -23,6 +24,7 @@ public class UserRepositoryTest extends AbstractRepositoryTestWithTestData {
      *         user user0_
      *     where
      *         user0_.id=?
+     *  </pre>
      */
     @Test
     public void findById() {

@@ -13,6 +13,7 @@ public class AlbumRepositoryTest extends AbstractRepositoryTestWithTestData {
 
 
     /**
+     * <pre>
      * select
      *         album0_.id as id1_0_0_,
      *         album0_.author_id as author_i4_0_0_,
@@ -27,6 +28,7 @@ public class AlbumRepositoryTest extends AbstractRepositoryTestWithTestData {
      *             on album0_.author_id=author1_.id
      *     where
      *         album0_.id=?
+     *  </pre>
      */
     @Test
     public void findById() {
