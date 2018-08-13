@@ -56,8 +56,8 @@ public class SongRepositoryTest extends AbstractRepositoryTestWithTestData {
      *  </strong>
      */
     @Test
-    public void findSongTitleOnlyById_shouldSelectOnlyTitleAndId() {
-        var song = songRepository.findSongTitleOnlyById(1L).orElseThrow();
+    public void findSongById_shouldSelectOnlyTitleAndId() {
+        var song = songRepository.findSongById(1L).orElseThrow();
 
         assertThat(song.getId()).isEqualTo(1L);
         assertThat(song.getTitle()).isEqualTo("song1");
@@ -82,8 +82,8 @@ public class SongRepositoryTest extends AbstractRepositoryTestWithTestData {
      *  </strong>
      */
     @Test
-    public void findSongById_shouldSelectOnlySongFieldsWithAlbumId() {
-        var song = songRepository.findSongById(1L).orElseThrow();
+    public void findSongAlbumIdById_shouldSelectOnlySongFieldsWithAlbumId() {
+        var song = songRepository.findSongAlbumIdById(1L).orElseThrow();
 
         assertThat(song.getTitle()).isEqualTo("song1");
         assertThat(song.getAlbumId()).isEqualTo(1L);

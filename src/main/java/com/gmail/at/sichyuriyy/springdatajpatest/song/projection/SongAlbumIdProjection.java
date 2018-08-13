@@ -1,6 +1,6 @@
 package com.gmail.at.sichyuriyy.springdatajpatest.song.projection;
 
-public interface SongWithAlbumIdProjection {
+public interface SongAlbumIdProjection {
     Long getId();
     String getTitle();
     Long getAlbumId();
